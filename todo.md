@@ -1,0 +1,118 @@
+# Project TODO
+
+- [x] Define an Arabic-first, RTL-compatible medical laboratory domain model for patients, medical records, test catalog, requests, samples, results, invoices, payments, inventory, and audit events.
+- [x] Extend the user roles to Administrator, Doctor, Lab Technician, and Receptionist, with permission checks at the server and UI layers.
+- [x] Build the premium RTL dashboard shell with responsive sidebar navigation, accessible components, and daily operational statistics.
+- [x] Implement patient registration with Arabic contact details, identity data, clinical notes, allergies, and longitudinal medical-record views.
+- [x] Implement the test catalog with departments, test categories, specimen requirements, result types, units, normal-reference values, prices, and active status.
+- [x] Implement test requests with patient selection, doctor/referrer information, requested tests, payment status, barcode-ready accession numbers, and lifecycle state tracking.
+- [x] Implement sample receipt, labeling, specimen status changes, technician work queues, rejection reasons, and chain-of-custody timestamps.
+- [x] Implement technician result entry for numeric and text results, units, reference ranges, abnormal flags, comments, and draft/final workflows.
+- [x] Implement doctor approval and delivery workflows, with complete result status history.
+- [x] Implement a polished print-ready Arabic laboratory report with laboratory identity, test results, reference values, approval details, logo placeholder, and doctor-signature placeholder.
+- [x] Implement invoice creation, payment recording, balances, and daily financial-report summaries connected to test requests.
+- [x] Implement inventory management for laboratory supplies and chemicals, including stock movements, reorder thresholds, expiry dates, and low-stock alerts.
+- [x] Implement searchable and filterable audit logs for important system events, with export-ready data formatting.
+- [x] Add Arabic sample master data only where required to demonstrate workflows, clearly marked as operational sample configuration rather than user reviews or testimonials. Arabic catalog templates are clearly labeled as configuration drafts requiring medical validation before use.
+- [x] Add offline-capable application shell, local-network deployment guidance, data-backup considerations, and safe synchronization boundaries.
+- [x] Write Vitest coverage for domain validation, roles/permissions, workflow transitions, billing calculations, inventory alerts, and audit-log behavior.
+- [x] Verify the interface visually in desktop and mobile RTL layouts, run type checks and tests, and resolve discovered issues.
+- [x] Prepare a local deployment and operator guide for an offline laboratory installation sized for approximately 1,000 patients and 100,000 ordered tests per day.
+- [x] Audit the prototype against production LIMS requirements and document the functional, security, integration, and operational gaps.
+- [x] Compare mature open-source LIMS and hospital platforms for offline deployment, Arabic localization, licensing, laboratory workflow coverage, interoperability, and maintainability.
+- [x] Select the appropriate open-source foundation and establish a safe local deployment and customization plan.
+- [x] Produce and validate an OpenELIS Arabic source customization package with RTL, UI and server message bundles, Arabic locale migration, runtime configuration, backup/restore utilities, preflight checks, and a role-based go-live checklist.
+- [x] Define a hospital-to-laboratory interoperability contract for patient identity, orders, results, corrections, and audit attribution using supported FHIR and HL7 boundaries.
+- [x] Prepare a local integration deployment profile and acceptance scenarios for the hospital platform, OpenELIS, and each analyzer device.
+- [x] Create a concrete protected deployment profile for OpenMRS 3 and OpenELIS, including service-account boundaries, resource flow, local configuration locations, and rollback steps.
+- [x] Add a per-protocol analyzer acceptance matrix for ASTM, HL7/MLLP, and file import, with mapped codes, units, abnormal/critical cases, error handling, and production promotion criteria.
+- [ ] Replace prototype-only workflows with integrated production modules for patient registration, orders, specimens, results, validation, reporting, billing, inventory, users, and audit controls.
+- [ ] Deliver complete Arabic RTL localization, local authentication, administration, print templates, backup procedures, and device-integration boundaries.
+- [ ] Obtain Arabic medical-language review and local laboratory approval for high-risk results, sample rejection, critical values, reports, and RTL screens before clinical use.
+- [ ] Execute role-based acceptance testing, performance testing, recovery testing, and a documented go-live readiness review.
+- [x] Document the 1,000-patient/100,000-analysis daily capacity profile, approved synthetic-fixture rules, test phases, evidence fields, and go/no-go criteria for the target local server.
+- [x] Create a one-page simplified local-server setup checklist with only the required manual actions and stop conditions.
+- [x] Create concise fill-in forms for hospital linkage, per-device activation, Arabic review, backup restore, and go-live sign-off.
+- [x] Make offline LAN operation and administrator-managed laboratory identity the documented default configuration, without hard-coded laboratory naming.
+- [x] Add a broad protocol-classified analyzer catalog with inactive starter profiles and mandatory local mapping/acceptance boundaries.
+- [x] Integrate analyzer starter-catalog safety validation into the simplified local preflight output.
+- [x] Assess the supplied SENAITE source package, compare it with OpenELIS, and document a GPL-2.0-compliant reuse or parallel-evaluation path.
+- [x] Assess the supplied Bahmni Docker package and document portable deployment, environment, image-pinning, and security practices for the OpenELIS local path.
+- [x] Add a safe local OpenELIS operations launcher with explicit status, logs, pinned-environment verification, and a separate destructive-reset guard.
+- [x] Assess the supplied CareCode HMIS governance and build-security files, then document an AGPL-aware, no-code-copy improvement path for OpenELIS.
+- [x] Remove default local database and administrator credentials from the OpenELIS deployment path and add a secret-hygiene verification gate.
+- [x] Define and validate a layered customization boundary so local extensions do not modify upstream OpenELIS core workflows directly.
+- [x] Add a 200-line maximum source-file policy with an explicit generated/upstream exception manifest and automated verification for local custom code.
+- [x] Document and validate offline-first operation with an optional, deny-by-default online integration boundary that never blocks local laboratory work.
+- [x] Evaluate whether the hardened OpenELIS path meets the architecture gate before considering any full rewrite.
+- [x] Implement a local-customization engineering gate that enforces layer ownership, a 200-line maximum, and explicit upstream exceptions.
+- [x] Ensure the customization engineering gate includes untracked local code files before a patch can be accepted.
+- [x] Assess the supplied HospitalRun frontend tooling and document a MIT-compatible, no-code-copy quality-gate path for OpenELIS local customizations.
+- [x] Add a single local quality-gate command that runs engineering, secret, Arabic, analyzer, documentation, and RTL unit checks before patch export.
+- [x] Add a local static security-pattern gate for dangerous dynamic execution, unsafe HTML injection, insecure HTTP endpoints, and missing shell hardening in customization code.
+- [x] Assess the supplied Marley Health/Frappe governance and deployment files, then document a GPL-3.0-aware parallel HIS/ERP evaluation path.
+- [x] Define a hospital-domain boundary between Marley Health/Frappe and OpenELIS so patient, order, result, pharmacy, billing, and audit ownership are unambiguous.
+- [x] Define an administrator-delegated clinical permission model with least privilege, role templates, auditability, and no dependence on HR availability.
+- [x] Design a simple optional HR boundary for attendance, hours, and payroll that is operationally and technically isolated from medical and laboratory workflows.
+- [x] Assess the supplied UniversaLIS project as an optional analyzer gateway and document a safe, non-blocking bridge boundary with OpenELIS.
+- [x] Assess the supplied OrangeHRM Starter source, license, security guidance, and supported HR scope for separate local deployment.
+- [x] Prepare an OrangeHRM deployment and acceptance profile that keeps employee attendance, hours, and payroll isolated from OpenELIS availability, identities, databases, and clinical authorization.
+- [x] Create a separate, secret-free OrangeHRM deployment pack with private HR networking and no OpenELIS services, databases, identities, or medical-data paths.
+- [ ] Configure and acceptance-test a separate HR service and delegated permissions on the target local server, including a forced HR outage while patient, order, specimen, result, approval, and report workflows continue.
+- [x] Perform an independent purchaser security and operational audit of OpenELIS Arabic, the optional OrangeHRM HR deployment pack, and the UniversaLIS gateway boundary; record verified findings, evidence limits, remediation priority, and a buy/no-buy recommendation.
+- [ ] Remediate the OpenELIS P0 purchaser-audit findings for tracked secrets, build-time default credentials, root execution, and unpinned image bases without storing live secrets in source.
+- [ ] Harden OpenELIS network exposure, TLS, FHIR configuration, container privileges, public plugin routing, and CSP under an auditable local customization boundary.
+- [ ] Resolve or formally block the OrangeHRM production dependency vulnerabilities through an upstream-supported update path and a clean production audit result.
+- [ ] Re-run independent source, configuration, dependency, and deployment audits; update the purchaser decision with only verified closures and remaining field-test blockers.
+- [x] Complete and verify static OpenELIS remediation: remove scanned secret artifacts, move runtime inputs outside Git, remove build-time administrator defaults, pin base images, run as non-root where configured, and export a reverse-checkable patch.
+- [x] Re-run static security, quality, Compose, npm, Composer, and patch-integrity checks; record only their measured outcomes in the purchaser remediation evidence.
+- [ ] Build and scan OpenELIS and OrangeHRM images on a suitable target/CI host; generate SBOMs and prove container startup, volume ownership, and non-root compatibility.
+- [ ] Migrate the Arabic OpenELIS patch set from `3.2.2.rc.0` to a supported production tag and complete Java, integration, and regression testing.
+- [ ] Complete target-LAN TLS, Nginx, FHIR authorization, plugin signing, CSP legacy migration, backup/restore, capacity, device, RBAC, and HR-outage acceptance evidence.
+- [x] Port the Arabic and security patch set to the official OpenELIS `3.2.2.0` tag in an isolated branch; resolve locale/Liquibase conflicts and pass static, frontend, and targeted Java checks.
+- [x] Add and test a protected signed SHA-256 allow-list gate that rejects an unapproved plugin JAR before local Compose starts.
+- [ ] Confirm the invoicing jurisdiction, tax-registration requirements, invoice schema, and approved electronic-invoice submission/clearance model before enabling statutory e-invoicing.
+- [ ] Design and implement an auditable double-entry accounting module with immutable posted journals, period controls, receivables, payments, credit notes, and reconciliation.
+- [ ] Implement electronic invoice creation, numbering, QR/structured payload generation, and an offline outbox that remains pending until a jurisdiction-approved submission adapter is configured.
+- [ ] Add automated financial tests for balanced journals, invoice totals, taxes, credits, reversals, duplicate prevention, and offline-to-online submission state transitions.
+- [ ] Produce and verify a one-command local deployment package with protected runtime inputs, integrity checks, operator guide, and explicit production acceptance gates.
+- [ ] Add administrator-managed country selection with an ISO country catalog and a clear separation between country choice and statutory electronic-invoicing enablement.
+- [ ] Add administrator-only tax-policy controls to enable or disable tax, set a percentage rate, set an effective date, and preserve immutable audit history of every policy change.
+- [ ] Enforce that posted invoices retain their original tax snapshot and can only be corrected through a credit note or reversing journal, never by retroactive tax-policy edits.
+- [ ] Locate and inspect the owner-selected Windows repository at `F:\medicalalab\medcalide\MedicalLabSystemfinal\medicallab`, recording a read-only Baseline-0 before any modification.
+- [ ] Reconcile the supplied Master Execution Contract v4.0 with the actual repository, existing OpenELIS package, licensing boundary, and approved system target; record each incompatibility as an ADR or scope blocker.
+- [ ] Create append-only evidence and phase-gate scaffolding for the Windows LIS repository after the owner confirms the applicable contract decisions.
+- [ ] Reconcile the supplied Master Execution Contract v4.0 with the current web-based MediLab/OpenELIS deployment model and record approved adaptations, exclusions, and scope blockers.
+- [ ] Establish a read-only Baseline-0, mismatch register, dependency matrix, and append-only local evidence structure for the current program before further clinical workflow changes.
+- [ ] Supersede v3.0/v4.0 as execution references with Master Execution Contract v5.0, while documenting the required adaptation from its Windows/WPF/PostgreSQL target to the current MediLab/OpenELIS architecture.
+- [ ] Freeze new feature work under Contract v5.0 until the current production-dependency audit failure is resolved through an owner-approved ADR and an evidence-backed gate rerun.
+- [x] Resolve the current MediLab web application's production dependency gate under approved ADR-0001: `pnpm check` passed, 2 test files/9 tests passed, and `pnpm audit --prod --json` reported zero advisories.
+- [x] Complete the post-Express remediation gate after runtime compatibility fixes: `pnpm check`, 2 test files/9 tests, production build without chunk-size warnings, and `pnpm audit --prod --json` all passed.
+- [x] Add real route-level and vendor code splitting so the production JavaScript no longer emits an over-500-kB chunk warning.
+- [x] Add and verify a BigInt-based ledger arithmetic foundation with tax and journal-balance invariants: 3 test files / 15 tests passed, production build passed without chunk warnings, and production dependency audit passed with zero advisories.
+- [ ] Complete transaction-level finance tests for invoice posting, immutable tax snapshots, credit notes, reversals, payments, reconciliation, and offline electronic-invoice outbox transitions.
+- [x] Enforce the ISO country catalog at the server boundary and verify known/unknown country codes; the current test run passes 5 files / 19 tests.
+- [ ] Add database-backed transaction tests for immutable tax snapshots and idempotent electronic-invoice posting before calling the financial workflow production-ready.
+- [x] Add a database schema and protected tRPC boundary for full credit-note reversal, including an immutable reason, unique note number, reversal journal, and voiding of the original invoice.
+- [ ] Add the credit-note action and history view to the Finance UI, then verify it against a real database transaction.
+- [x] Persist a hashed structured e-invoice payload and generated QR data URL in the offline outbox; after the QR dependency change, typecheck, 5 test files / 19 tests, production build, and production audit all passed.
+- [ ] Add a jurisdiction-specific adapter contract and real submission/retry tests; country selection alone must never be treated as statutory clearance.
+- [x] Add the credit-note action and history view to the Finance UI, show the persisted QR when available, invalidate the history query after posting, and pass typecheck/tests/build validation.
+- [x] Reject statutory e-invoice mode until a jurisdiction-specific approved adapter is configured; country selection and generic offline outbox remain separate.
+- [x] Add isolated transaction-boundary tests for electronic-invoice posting/QR persistence and duplicate credit-note rejection; the suite now passes 6 files / 22 tests with typecheck and production build.
+- [ ] Verify the same invoice, tax snapshot, QR, credit note, and reversal-journal invariants against a disposable target database without using production data.
+
+- [x] Add accounting-period schema, administrator-only close/list procedures, UTC period-key validation, and fail-closed posting guard; typecheck, 6 test files / 23 tests, and production build passed.
+- [ ] Validate accounting-period close and invoice/payment/credit-note lifecycle against a disposable target database without production data.
+- [ ] Add a jurisdiction-specific adapter contract and real submission/retry tests; country selection alone must never be treated as statutory clearance.
+- [ ] Prepare the one-command local deployment package and verify it on a Docker-enabled target host.
+
+- [x] Define a fail-closed jurisdiction-adapter contract and registry with country validation, pre-submission validation, idempotency-key boundary, and duplicate-adapter protection; 7 test files / 26 tests pass.
+
+- [x] Prepare a one-command local deployment package with internal Compose networking, persistent database volume, health-gated startup, externalized secrets, and destructive-reset warning; syntax and Compose interpolation checks pass, while target-host startup remains open.
+
+- [x] Add a fail-safe disposable-database integration-test harness gated by TEST_DATABASE_URL and ALLOW_DISPOSABLE_DB_TEST=1; sandbox result is explicit skip (26 passed, 1 skipped), not a production-readiness claim.
+
+- [x] Fix Windows npm/pnpm scripts so NODE_ENV commands run in PowerShell and document the supported local start commands.
+
+- [x] Add a Windows PowerShell deployment launcher for Docker Desktop with safe .env checks and no destructive commands.

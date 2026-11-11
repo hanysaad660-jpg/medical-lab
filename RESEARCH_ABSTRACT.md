@@ -1,0 +1,6 @@
+# Research Abstract
+
+Over the next 6–12 months, this independent project will investigate how laboratory information systems can better preserve the links between patient identity, test requests, specimens, and results, especially when tests are repeated or information arrives from different systems. The work will compare established laboratory workflows and relevant healthcare standards, then use iterative software prototypes and synthetic-data testing to examine approaches to traceability, auditability, interoperability, and bilingual usability. AI-assisted engineering tools, including Google Antigravity where available, may support literature and codebase review, design comparisons, test planning, and routine documentation, with human review of all consequential decisions. Planned outputs include a research prototype, workflow and architecture documentation, reproducible test scenarios, and public technical findings that do not disclose patient data or private software.
+
+**Research setting:** Independent research and development; no institutional affiliation is claimed.  
+**Project status:** Ongoing; outputs listed here are plans, not completed or independently validated findings.
